@@ -30,7 +30,7 @@ function calculatorModule() {
  * @return { Number }    current total
  */
   function _load(num) {
-    if ( valid(num) ) {
+    if ( _valid(num) ) {
       total = num;
       return total;
     } else {
@@ -54,7 +54,7 @@ function calculatorModule() {
    * @param { Number } x
    */
   function _add(num) {
-    if ( valid(num) ) {
+    if ( _valid(num) ) {
       return total += num;
     } else {
       return 'how the fuck did you think entering numbers on a calculator would work';
@@ -68,7 +68,7 @@ function calculatorModule() {
    * @param  { Number } x
    */
   function _subtract(num) {
-    if ( valid(num) ) {
+    if ( _valid(num) ) {
       return total -= num;
     } else {
       return 'how the fuck did you think entering numbers on a calculator would work';
@@ -81,7 +81,7 @@ function calculatorModule() {
    * @param  { Number } x
    */
   function _multiply(num) {
-    if ( valid(num) ) {
+    if ( _valid(num) ) {
       return total *= num;
     } else {
       return 'how the fuck did you think entering numbers on a calculator would work';
@@ -94,7 +94,7 @@ function calculatorModule() {
    * @param  { Number } x
    */
   function _divide(num) {
-    if ( valid(num) ) {
+    if ( _valid(num) ) {
       return total /= num;
     } else {
       return 'how the fuck did you think entering numbers on a calculator would work';
@@ -131,7 +131,7 @@ function calculatorModule() {
   /**
    * Validation
    */
-  function valid(x) {
+  function _valid(x) {
     if ( typeof x  === 'number') {
       return true;
     } else {
